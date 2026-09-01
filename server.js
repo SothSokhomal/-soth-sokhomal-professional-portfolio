@@ -664,8 +664,8 @@ app.post('/api/auth/login', loginLimiter, async (req, res) => {
       
       res.cookie('admin_session', token, {
         httpOnly: true,
-        secure: process.env.NODE_ENV === 'production',
-        sameSite: 'strict',
+        secure: false, // Temporary until HTTPS is setup
+        sameSite: 'lax',
         maxAge: 2 * 60 * 60 * 1000 // 2 hours
       });
 

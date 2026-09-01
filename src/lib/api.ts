@@ -22,13 +22,19 @@ import {
 
 const BASE_URL = '/api';
 
+
+async function safeJson(res: Response) {
+  const isJson = res.headers.get('content-type')?.includes('application/json');
+  return isJson ? await safeJson(res) : null;
+}
+
 export const api = {
   // Projects
   getProjects: async (): Promise<Project[]> => {
     try {
-      const res = await fetch(`${BASE_URL}/projects`);
+      const res = await fetch(`${BASE_URL}/projects`, { credentials: 'include' });
       if (!res.ok) throw new Error('Failed to fetch projects');
-      return await res.json();
+      return await safeJson(res);
     } catch (err) {
       console.warn('[API] Using local projects fallback:', err);
       return initialProjects;
@@ -42,7 +48,7 @@ export const api = {
       body: JSON.stringify(projectData),
     });
     if (!res.ok) throw new Error('Failed to create project');
-    return await res.json();
+    return await safeJson(res);
   },
 
   updateProject: async (id: string, projectData: Partial<Project>): Promise<Project> => {
@@ -52,7 +58,7 @@ export const api = {
       body: JSON.stringify(projectData),
     });
     if (!res.ok) throw new Error('Failed to update project');
-    return await res.json();
+    return await safeJson(res);
   },
 
   deleteProject: async (id: string): Promise<boolean> => {
@@ -67,7 +73,7 @@ export const api = {
     try {
       const res = await fetch(`${BASE_URL}/projects/${id}/view`, { method: 'POST' });
       if (res.ok) {
-        const data = await res.json();
+        const data = await safeJson(res);
         return data.views || 0;
       }
     } catch {
@@ -81,7 +87,7 @@ export const api = {
     try {
       const res = await fetch(`${BASE_URL}/experiences`);
       if (!res.ok) throw new Error('Failed to fetch experiences');
-      return await res.json();
+      return await safeJson(res);
     } catch (err) {
       console.warn('[API] Using local experiences fallback:', err);
       const edu: ExperienceItem[] = educationData.map((e) => ({
@@ -108,7 +114,7 @@ export const api = {
       body: JSON.stringify(data),
     });
     if (!res.ok) throw new Error('Failed to create experience');
-    return await res.json();
+    return await safeJson(res);
   },
 
   updateExperience: async (id: string, data: Partial<ExperienceItem>): Promise<ExperienceItem> => {
@@ -118,7 +124,7 @@ export const api = {
       body: JSON.stringify(data),
     });
     if (!res.ok) throw new Error('Failed to update experience');
-    return await res.json();
+    return await safeJson(res);
   },
 
   deleteExperience: async (id: string): Promise<boolean> => {
@@ -134,7 +140,7 @@ export const api = {
     try {
       const res = await fetch(`${BASE_URL}/achievements`);
       if (!res.ok) throw new Error('Failed to fetch achievements');
-      return await res.json();
+      return await safeJson(res);
     } catch (err) {
       console.warn('[API] Using local achievements fallback:', err);
       const certs: AchievementItem[] = certificatesData.map((c) => ({
@@ -163,7 +169,7 @@ export const api = {
       body: JSON.stringify(data),
     });
     if (!res.ok) throw new Error('Failed to create achievement');
-    return await res.json();
+    return await safeJson(res);
   },
 
   updateAchievement: async (id: string, data: Partial<AchievementItem>): Promise<AchievementItem> => {
@@ -173,7 +179,7 @@ export const api = {
       body: JSON.stringify(data),
     });
     if (!res.ok) throw new Error('Failed to update achievement');
-    return await res.json();
+    return await safeJson(res);
   },
 
   deleteAchievement: async (id: string): Promise<boolean> => {
@@ -187,9 +193,9 @@ export const api = {
   // Tech Categories & Skills
   getTechCategories: async (): Promise<SkillCategory[]> => {
     try {
-      const res = await fetch(`${BASE_URL}/tech-categories`);
+      const res = await fetch(`${BASE_URL}/tech-categories`, { credentials: 'include' });
       if (!res.ok) throw new Error('Failed to fetch tech categories');
-      return await res.json();
+      return await safeJson(res);
     } catch (err) {
       console.warn('[API] Using local tech categories fallback:', err);
       return skillsData;
@@ -203,7 +209,7 @@ export const api = {
       body: JSON.stringify(data),
     });
     if (!res.ok) throw new Error('Failed to create tech category');
-    return await res.json();
+    return await safeJson(res);
   },
 
   updateTechCategory: async (id: string, data: Partial<SkillCategory>): Promise<SkillCategory> => {
@@ -213,7 +219,7 @@ export const api = {
       body: JSON.stringify(data),
     });
     if (!res.ok) throw new Error('Failed to update tech category');
-    return await res.json();
+    return await safeJson(res);
   },
 
   deleteTechCategory: async (id: string): Promise<boolean> => {
@@ -227,9 +233,9 @@ export const api = {
   // Languages
   getLanguages: async (): Promise<LanguageItem[]> => {
     try {
-      const res = await fetch(`${BASE_URL}/languages`);
+      const res = await fetch(`${BASE_URL}/languages`, { credentials: 'include' });
       if (!res.ok) throw new Error('Failed to fetch languages');
-      return await res.json();
+      return await safeJson(res);
     } catch (err) {
       console.warn('[API] Using local languages fallback:', err);
       return languagesData;
@@ -243,7 +249,7 @@ export const api = {
       body: JSON.stringify(data),
     });
     if (!res.ok) throw new Error('Failed to create language');
-    return await res.json();
+    return await safeJson(res);
   },
 
   updateLanguage: async (id: string, data: Partial<LanguageItem>): Promise<LanguageItem> => {
@@ -253,7 +259,7 @@ export const api = {
       body: JSON.stringify(data),
     });
     if (!res.ok) throw new Error('Failed to update language');
-    return await res.json();
+    return await safeJson(res);
   },
 
   deleteLanguage: async (id: string): Promise<boolean> => {
@@ -267,9 +273,9 @@ export const api = {
   // Messages / Inquiries
   getMessages: async (): Promise<Message[]> => {
     try {
-      const res = await fetch(`${BASE_URL}/messages`);
+      const res = await fetch(`${BASE_URL}/messages`, { credentials: 'include' });
       if (!res.ok) throw new Error('Failed to fetch messages');
-      return await res.json();
+      return await safeJson(res);
     } catch (err) {
       console.warn('[API] Using local messages fallback:', err);
       return initialMessages;
@@ -289,7 +295,7 @@ export const api = {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(messageData),
     });
-    const data = await res.json();
+    const data = await safeJson(res);
     if (!res.ok) {
       throw new Error(data.error || 'Failed to dispatch inquiry');
     }
@@ -301,7 +307,7 @@ export const api = {
       method: 'PUT', credentials: 'include',
     });
     if (!res.ok) throw new Error('Failed to update message status');
-    return await res.json();
+    return await safeJson(res);
   },
 
   deleteMessage: async (id: string): Promise<boolean> => {
@@ -315,9 +321,9 @@ export const api = {
   // Settings
   getSettings: async (): Promise<PersonalInfo> => {
     try {
-      const res = await fetch(`${BASE_URL}/settings`);
+      const res = await fetch(`${BASE_URL}/settings`, { credentials: 'include' });
       if (!res.ok) throw new Error('Failed to fetch settings');
-      return await res.json();
+      return await safeJson(res);
     } catch (err) {
       console.warn('[API] Using local settings fallback:', err);
       return initialProfileSettings;
@@ -331,7 +337,7 @@ export const api = {
       body: JSON.stringify(settings),
     });
     if (!res.ok) throw new Error('Failed to update profile settings');
-    return await res.json();
+    return await safeJson(res);
   },
 
   uploadResume: async (fileData: string, filename?: string): Promise<{ success: boolean; resumePdf: string; size?: number; filename?: string }> => {
@@ -341,15 +347,15 @@ export const api = {
       body: JSON.stringify({ file: fileData, filename }),
     });
     if (!res.ok) throw new Error('Failed to upload resume file');
-    return await res.json();
+    return await safeJson(res);
   },
 
   // Stats & System Health
   getStats: async (): Promise<AdminStats> => {
     try {
-      const res = await fetch(`${BASE_URL}/stats`);
+      const res = await fetch(`${BASE_URL}/stats`, { credentials: 'include' });
       if (!res.ok) throw new Error('Failed to fetch stats');
-      return await res.json();
+      return await safeJson(res);
     } catch (err) {
       return {
         totalProjects: initialProjects.length,
@@ -366,7 +372,7 @@ export const api = {
   // Admin Auth
   logoutAdmin: async (): Promise<{ success: boolean }> => {
     const res = await fetch(`${BASE_URL}/auth/logout`, { method: 'POST', credentials: 'include' });
-    return await res.json();
+    return await safeJson(res);
   },
 
   loginAdmin: async (email: string, pin: string): Promise<{ success: boolean; token?: string; message?: string }> => {
@@ -375,7 +381,7 @@ export const api = {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, pin }),
     });
-    const data = await res.json();
+    const data = await safeJson(res);
     if (!res.ok) {
       throw new Error(data.message || 'Authentication rejected');
     }
@@ -388,6 +394,6 @@ export const api = {
       method: 'POST', credentials: 'include',
     });
     if (!res.ok) throw new Error('Test notification failed');
-    return await res.json();
+    return await safeJson(res);
   },
 };
