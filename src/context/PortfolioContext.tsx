@@ -282,13 +282,11 @@ export const PortfolioProvider: React.FC<{ children: ReactNode }> = ({ children 
   const loginAdmin = async (email: string, pin: string): Promise<boolean> => {
     try {
       const res = await api.loginAdmin(email, pin);
-      if (res.success && res.token) {
-        localStorage.setItem('admin_token', res.token);
+      if (res.success) {
         setIsAdmin(true);
-        setAdminToken(res.token);
         setIsLoginModalOpen(false);
         setActiveView('admin');
-        addToast('success', 'Admin Authenticated', `Welcome back, ${settings.name}! Admin mode unlocked.`);
+        addToast('success', 'Admin Authenticated', `Welcome back! Admin mode unlocked.`);
         const msgRes = await api.getMessages();
         setMessages(msgRes);
         return true;
@@ -300,7 +298,10 @@ export const PortfolioProvider: React.FC<{ children: ReactNode }> = ({ children 
     }
   };
 
-  const logoutAdmin = () => {
+  const logoutAdmin = async () => {
+    try {
+      await api.logoutAdmin();
+    } catch(e) {}
     localStorage.removeItem('admin_token');
     setIsAdmin(false);
     setAdminToken(null);
