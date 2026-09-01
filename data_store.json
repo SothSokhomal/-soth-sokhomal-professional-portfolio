@@ -1,0 +1,409 @@
+{
+  "projects": [
+    {
+      "id": "proj-1787233921108",
+      "title": "fdsfdsfsdfdsfdsf",
+      "category": "AI & Full-Stack",
+      "description": "fdsfdsfsdfsdfdsfsdfds",
+      "techStack": [],
+      "githubUrl": "https://github.com/SothSokhomal/",
+      "liveUrl": "https://demo.sothsokhomal.dev",
+      "problem": "sdfjnjsdkjfksdjfksdfjds",
+      "contribution": "fksdjfisdjfoisdkjfskdmf",
+      "challenges": "fkjsfsjdfksdjfksjdf",
+      "lessonsLearned": "fjdsfkdhsfkjsdfklsdjfksjf",
+      "isFeatured": false,
+      "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80",
+      "metrics": "",
+      "views": 0,
+      "createdAt": "2026-08-20T13:52:01.108Z",
+      "technologies": [
+        "TypeScript",
+        "React"
+      ],
+      "features": []
+    },
+    {
+      "id": "proj-1",
+      "title": "AI-Powered Weather Chatbot",
+      "category": "AI & Full-Stack",
+      "technologies": [
+        "React.js",
+        "Node.js",
+        "Dialogflow",
+        "OpenWeatherMap API",
+        "NLP"
+      ],
+      "description": "An intelligent chatbot that answers weather-related questions using natural language processing (NLP). Features real-time weather retrieval with fluid conversational turns.",
+      "problem": "Traditional weather apps require multiple taps and offer stale configurations, lacking an engaging conversational format.",
+      "features": [
+        "Natural Language Processing (NLP) conversation interface",
+        "Real-time weather query parsing via API",
+        "Responsive messaging UI built with React component state"
+      ],
+      "contribution": "Designed and developed the entire React frontend and integrated Node.js backend logic to securely route credentials to Dialogflow and OpenWeatherMap APIs.",
+      "challenges": "Handling conversational fallback loops when the model encountered highly abstract or multi-city requests.",
+      "lessonsLearned": "Deepened engineering expertise in async/await API communications, RESTful response handling, and custom messaging animations.",
+      "githubUrl": "https://github.com/SothSokhomal/Weather-Bot-App",
+      "featured": true,
+      "image": "https://images.unsplash.com/photo-1534088568595-a066f410bcda?auto=format&fit=crop&w=1200&q=80",
+      "views": 343,
+      "createdAt": "2025-01-15T08:00:00Z"
+    },
+    {
+      "id": "proj-2",
+      "title": "Personal Portfolio Website",
+      "category": "Frontend Design",
+      "technologies": [
+        "Next.js 14",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Framer Motion",
+        "MongoDB",
+        "Prisma"
+      ],
+      "description": "A gorgeous, responsive portfolio representing Soth Vannak RothChansokhomal's professional development journey, academic achievements, and projects.",
+      "problem": "Employers need a centralized, premium digital hub that clearly communicates technical proficiencies and displays project histories in an instantly legible manner.",
+      "features": [
+        "Sleek modern user interface with dark & light high-contrast layout options",
+        "Responsive mobile-first grid layout",
+        "Direct downloadable resume, clean contact controls, and secure Admin Dashboard"
+      ],
+      "contribution": "Crafted the layout structures, responsive grids, geometric backgrounds, and unified typing presentation.",
+      "challenges": "Achieving complex, fluid geometric curves and floating blobs that scale perfectly across mobile viewports without blocking interactions.",
+      "lessonsLearned": "Acquired a rigorous mental model of component boundaries, custom interactive hover state styles, and accessibility pairings.",
+      "githubUrl": "https://github.com/SothSokhomal/SothSokhomal_portfolio",
+      "liveUrl": "https://sothsokhomal.github.io/SothSokhomal_portfolio/",
+      "featured": true,
+      "image": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80",
+      "views": 412,
+      "createdAt": "2025-02-10T10:30:00Z"
+    },
+    {
+      "id": "proj-3",
+      "title": "Expense Tracker Web Application",
+      "category": "Web App (CRUD)",
+      "technologies": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Node.js"
+      ],
+      "description": "A fast, lightweight daily financial tracker. Enables users to maintain records, visualize spending, and manage transactions in real-time.",
+      "problem": "Standard financial logs are heavy, require persistent authentication, and contain cluttered visual components.",
+      "features": [
+        "Add, Read, Update, and Delete transactions easily",
+        "Dynamic table updating without full-page reloads",
+        "Data input validation and total expense indicator"
+      ],
+      "contribution": "Built the entire front-end view, set up local memory state synchronization, and programmed the modal triggers.",
+      "challenges": "Enabling in-line updating where specific elements switch to input fields seamlessly and maintain formatting upon saving.",
+      "lessonsLearned": "Gained structural expertise in native DOM manipulations, JavaScript form object handlers, and event delegation patterns.",
+      "githubUrl": "https://github.com/SothSokhomal/expenseapp",
+      "liveUrl": "https://expenseapp-2usy127qy-sothsokhomals-projects.vercel.app/",
+      "featured": true,
+      "image": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1200&q=80",
+      "views": 289,
+      "createdAt": "2025-01-28T14:15:00Z"
+    },
+    {
+      "id": "proj-4",
+      "title": "Spotify UI Clone",
+      "category": "UI Cloning",
+      "technologies": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Flexbox & Grid"
+      ],
+      "description": "A highly faithful, fully responsive front-end replication of the Spotify web player experience, prioritizing navigation structure and media cards.",
+      "problem": "Replicating complex multi-panel desktop layouts on standard browser windows while keeping grid ratios aesthetic.",
+      "features": [
+        "Perfect dark-mode replication of modern sidebar, content, and player interfaces",
+        "Hover interactions for playlist covers",
+        "Responsive menu behavior across mobile and desktop breakpoints"
+      ],
+      "contribution": "Sole designer and coder. Crafted custom layout scroll behaviors, typography settings, and player slider interactions.",
+      "challenges": "Managing overlapping fixed elements and setting appropriate overflow properties so specific containers scroll independently.",
+      "lessonsLearned": "Mastered deep CSS styling protocols including flex alignments, advanced CSS grids, custom scrollbars, and fluid scaling.",
+      "githubUrl": "https://github.com/SothSokhomal/song_soundie",
+      "liveUrl": "https://sothsokhomal.github.io/song_soundie/",
+      "featured": true,
+      "image": "https://images.unsplash.com/photo-1614680376593-902f749f7ffc?auto=format&fit=crop&w=1200&q=80",
+      "views": 310,
+      "createdAt": "2024-11-20T09:00:00Z"
+    },
+    {
+      "id": "proj-5",
+      "title": "Face Recognition Pipeline",
+      "category": "Computer Vision",
+      "technologies": [
+        "Python",
+        "OpenCV",
+        "Haar Cascade",
+        "Computer Vision"
+      ],
+      "description": "An end-to-end computer vision program integrated with real-time webcams to detect individual faces, compute bounding coordinates, and verify identity labels.",
+      "problem": "Real-time video frame parsing is intensive and often causes performance stutters or delayed recognition loops.",
+      "features": [
+        "Real-time webcam stream input processing",
+        "Accurate bounding boxes on multiple faces simultaneously",
+        "Identified label tagging with instant name overlay"
+      ],
+      "contribution": "Programmed the camera collection pipeline, integrated the pre-trained cascade parameters, and managed training structures.",
+      "challenges": "Minimizing false positives under variable illumination and maintaining consistent 30 FPS playback rates on standard laptop hardware.",
+      "lessonsLearned": "Understood computer vision fundamentals: image matrices, grayscale transformations, classification thresholds, and real-time threading.",
+      "githubUrl": "https://github.com/SothSokhomal/Face_Recognition",
+      "featured": true,
+      "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
+      "views": 265,
+      "createdAt": "2024-12-05T16:45:00Z"
+    },
+    {
+      "id": "proj-6",
+      "title": "Classic Snake Game",
+      "category": "Game Dev",
+      "technologies": [
+        "Python",
+        "Pygame"
+      ],
+      "description": "An elegant recreation of the retro arcade classic. Features intuitive directional inputs, scoring systems, and progressive velocity parameters.",
+      "problem": "Ensuring game-loop synchronization across different hardware speeds while tracking continuous coordinate loops.",
+      "features": [
+        "Smooth control response mechanics",
+        "Dynamic coordinate generation for randomized food spawns",
+        "Continuous velocity multipliers to ramp difficulty as score increases"
+      ],
+      "contribution": "Designed game loop matrices, programmed cell collision logic, and implemented key press event listener handlers.",
+      "challenges": "Solving sudden edge-collision bugs where immediate double-taps on opposing directions triggered instant self-collision.",
+      "lessonsLearned": "Obtained a deep mathematical understanding of continuous game state rendering, input polling, bounding check loops, and visual layers.",
+      "githubUrl": "https://github.com/SothSokhomal/SnakeGame",
+      "featured": true,
+      "image": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=80",
+      "views": 198,
+      "createdAt": "2025-02-02T11:20:00Z"
+    }
+  ],
+  "messages": [
+    {
+      "id": "msg-1787237513161",
+      "name": "jfndsfnsdfsdf ROSE",
+      "email": "soth.vannakrothchanbotum@gmail.com",
+      "subject": "fndskfmksdfm",
+      "telegram": "",
+      "message": "fjdksnfjksdnfjskfnsdjfnsdjfnsdjfkmnsdfjsndf",
+      "isRead": true,
+      "createdAt": "2026-08-20T14:51:53.161Z",
+      "ip": "103.193.207.114, 169.254.169.126"
+    },
+    {
+      "id": "msg-1787237418670",
+      "name": "dsmlkdsmfksdjf",
+      "email": "soth.vannakrothchanbotum@gmail.com",
+      "subject": "jfdnsjkfnsdkjfnsdf",
+      "telegram": "",
+      "message": "fdjsfidsnfjsdnfjsdfsdkfsdkfmsdf",
+      "isRead": false,
+      "createdAt": "2026-08-20T14:50:18.670Z",
+      "ip": "103.193.207.114, 169.254.169.126"
+    },
+    {
+      "id": "msg-1787237317386",
+      "name": "Client HR Recruiter",
+      "email": "recruiter@techcambodia.com",
+      "subject": "Interview Invitation: Senior Frontend & Fullstack Role",
+      "telegram": "@tech_recruiter_kh",
+      "message": "Hello Soth! We were very impressed with your portfolio projects and would love to invite you for an interview.",
+      "isRead": false,
+      "createdAt": "2026-08-20T14:48:37.386Z",
+      "ip": "127.0.0.1"
+    },
+    {
+      "id": "msg-1787236984501",
+      "name": "fndsmfnsd",
+      "email": "soth.vannakrothchanbotum@gmail.com",
+      "subject": "fjndsjfnsdkfnsdf",
+      "telegram": "",
+      "message": "fjnfjsdfnsdjfnsdjfnsd",
+      "isRead": false,
+      "createdAt": "2026-08-20T14:43:04.501Z",
+      "ip": "103.193.207.114, 169.254.169.126"
+    },
+    {
+      "id": "msg-1787236751047",
+      "name": "kfmdkfmsdkf",
+      "email": "soth.vannakrothchanbotum@gmail.com",
+      "subject": "jfndskfnskdfmsdkf",
+      "telegram": "",
+      "message": "fndsjfnsdkfnsdkfnsdkgjnskgnsg",
+      "isRead": false,
+      "createdAt": "2026-08-20T14:39:11.047Z",
+      "ip": "103.193.207.114, 169.254.169.126"
+    },
+    {
+      "id": "msg-1787236648647",
+      "name": "fdkjfkldsjfsdf",
+      "email": "soth.vannakrothchanbotum@gmail.com",
+      "subject": "jfsdjfndskjfnsdfsd",
+      "telegram": "",
+      "message": "fkdmskjfnsdjkfnskfmsdf",
+      "isRead": false,
+      "createdAt": "2026-08-20T14:37:28.647Z",
+      "ip": "103.193.207.114, 169.254.169.126"
+    },
+    {
+      "id": "msg-1787235985952",
+      "name": "fkjdfksdfksdf",
+      "email": "soth.vannakrothchanbotum@gmail.com",
+      "subject": "fjdsfksdjfksdjfds",
+      "telegram": "",
+      "message": "fjdsnkfjnsdkfjnsdkfjsndkfjnsdmf",
+      "isRead": false,
+      "createdAt": "2026-08-20T14:26:25.952Z",
+      "ip": "103.193.207.114, 169.254.169.126"
+    },
+    {
+      "id": "msg-1787235732344",
+      "name": "fdsnfjdsnfkjdsf",
+      "email": "soth.vannakrothchanbotum@gmail.com",
+      "subject": "fdjfdjksjfsdkjfsdf",
+      "telegram": "",
+      "message": "fsdkjfsidkjfsdkfjsdf",
+      "isRead": false,
+      "createdAt": "2026-08-20T14:22:12.344Z",
+      "ip": "103.193.207.114, 169.254.169.126"
+    },
+    {
+      "id": "msg-1787235541562",
+      "name": "fsdfsdfsfds",
+      "email": "soth.vannakrothchanbotum@gmail.com",
+      "subject": "fdshfisdhfjsdhfsudfsd",
+      "telegram": "",
+      "message": "fskjfsdhfsduhfsukdfnskdjfhsdifjsdf",
+      "isRead": false,
+      "createdAt": "2026-08-20T14:19:01.562Z",
+      "ip": "103.193.207.114, 169.254.169.126"
+    },
+    {
+      "id": "msg-1787235253662",
+      "name": "fdsnfjdsfnkjdsf",
+      "email": "soth.vannakrothchanbotum@gmail.com",
+      "subject": "fdjsfjksdfnkjdsfsdf",
+      "telegram": "",
+      "message": "fdjsfsdhfjdshfjsdfjdshfjdshfjsdhfs",
+      "isRead": false,
+      "createdAt": "2026-08-20T14:14:13.662Z",
+      "ip": "103.193.207.114, 169.254.169.126"
+    },
+    {
+      "id": "msg-1787235020204",
+      "name": "dfsdfsdfsfsdfsdfs",
+      "email": "soth.vannakrothchanfix@gmail.com",
+      "subject": "fsdfsdfsdfsf",
+      "telegram": "",
+      "message": "fdsfsdfhsufhsdkufhsdikfsdf",
+      "isRead": false,
+      "createdAt": "2026-08-20T14:10:20.204Z",
+      "ip": "103.193.207.114, 169.254.169.126"
+    },
+    {
+      "id": "msg-1787234778833",
+      "name": "fsdfsdfsdfsdfsd",
+      "email": "soth.vannakrothchanbotum@gmail.com",
+      "subject": "fjdsfnjsfnskjdjfksdff",
+      "telegram": "",
+      "message": "fjsdkfjsndkfnsdkfjsdkfjsdfkd",
+      "isRead": false,
+      "createdAt": "2026-08-20T14:06:18.833Z",
+      "ip": "103.193.207.114, 169.254.169.126"
+    },
+    {
+      "id": "msg-1787234694084",
+      "name": "fsdfsdfsdf",
+      "email": "soth.vannakrothchanbotum@gmail.com",
+      "subject": "fdsjfhsdhfjskdfsd",
+      "telegram": "",
+      "message": "fjdsnifkhsdnfhnsdfjhsnfjsdnf",
+      "isRead": false,
+      "createdAt": "2026-08-20T14:04:54.084Z",
+      "ip": "103.193.207.114, 169.254.169.126"
+    },
+    {
+      "id": "msg-1787234465867",
+      "name": "dfsdfsdfs",
+      "email": "soth.vannakrothchanbotum@gmail.com",
+      "subject": "fdsfnkjsdfnsd",
+      "telegram": "",
+      "message": "fsdjfidsjfidsjfsdfjsdifjsdikfjsdkfjmdsf",
+      "isRead": false,
+      "createdAt": "2026-08-20T14:01:05.867Z",
+      "ip": "103.193.207.114, 169.254.169.126"
+    },
+    {
+      "id": "msg-1787234348934",
+      "name": "dfdnsjfndsjkfnsdf",
+      "email": "soth.vannakrothchanbotum@gmail.com",
+      "subject": "fdjsjfdsjfnisdkf",
+      "telegram": "",
+      "message": "fdsjfsdhfnjsdhfjksdjfmsd",
+      "isRead": false,
+      "createdAt": "2026-08-20T13:59:08.934Z",
+      "ip": "103.193.207.114, 169.254.169.126"
+    },
+    {
+      "id": "msg-1787233871800",
+      "name": "fjdfidsjhfksdjfksdjfsdf",
+      "email": "soth.vannakrothchanbotum@gmail.com",
+      "subject": "fskdjfidsjfksdjfkldsfsdf",
+      "telegram": "",
+      "message": "fdsjkfiusdhfuskdhfiskjfmsdkljfmsdifjsdkfjs",
+      "isRead": false,
+      "createdAt": "2026-08-20T13:51:11.800Z",
+      "ip": "103.193.207.114, 169.254.169.126"
+    },
+    {
+      "id": "msg-1787233843444",
+      "name": "hdfjksdnkfsdf",
+      "email": "fdjksfhsdjkfhnsdkjfhnsd@gmail.com",
+      "subject": "fdjsfhjkdshfjkdjskjfksdffdsjfishdfuifkjdsgnjsg",
+      "telegram": "",
+      "message": "fjhsdjghsndkjgnskjgnjksdfgnjfkgnfkjgndfmkg",
+      "isRead": false,
+      "createdAt": "2026-08-20T13:50:43.444Z",
+      "ip": "103.193.207.114, 169.254.169.126"
+    },
+    {
+      "id": "msg-1",
+      "name": "Emily Watson",
+      "email": "emily.watson@techcorp-ventures.io",
+      "subject": "Software Developer Intern Opportunity at Global Studio",
+      "telegram": "@emilywatson_tech",
+      "message": "Hello Soth Sokhomal, we reviewed your Weather Chatbot and Expense Tracker projects. Your work on React, Node.js, and TypeScript matches our standards. Would love to schedule an introductory interview.",
+      "isRead": true,
+      "createdAt": "2025-02-20T02:45:00.000Z",
+      "ip": "192.168.1.45"
+    }
+  ],
+  "settings": {
+    "name": "Soth Sokhomal",
+    "shortName": "SothSokhomal",
+    "title": "Software Developer Intern",
+    "subtitle": "React | JavaScript | Node.js | Next.js | TypeScript",
+    "location": "Phnom Penh, Cambodia",
+    "phone": "085 257 728",
+    "email": "soth.vannakrothchansokhomal@gmail.com",
+    "github": "https://github.com/SothSokhomal",
+    "portfolio": "https://sothsokhomal.github.io/SothSokhomal_portfolio/",
+    "linkedin": "https://www.linkedin.com/in/sothvannakrothchansokhomal/",
+    "instagram": "https://www.instagram.com/soth.vannakrothchansokhomal/",
+    "facebook": "https://www.facebook.com/rose.555901",
+    "avatar": "/img/Soth vannak rothchansokhomal.jpg",
+    "resumePdf": "/Soth_Vannak_Rothchansokhomal_CV.pdf",
+    "bio": "Motivated Software Engineering student at CamTech with hands-on experience developing modern web applications using React, Next.js, Node.js, TypeScript, and REST APIs. Passionate about building high-performance software solutions, sleek user interfaces, and scalable backend architecture."
+  },
+  "stats": {
+    "totalViews": 1779,
+    "adminEmail": "soth.vannakrothchansokhomal@gmail.com"
+  }
+}

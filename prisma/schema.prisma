@@ -1,0 +1,168 @@
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// ------------------------------------------------------
+// Project Model
+// ------------------------------------------------------
+model Project {
+  id             String    @id @default(auto()) @map("_id") @db.ObjectId
+  title          String
+  category       String?   @default("Full Stack")
+  technologies   String[]
+  description    String?   @default("")
+  problem        String?
+  features       String[]
+  contribution   String?
+  challenges     String?
+  lessonsLearned String?
+  githubUrl      String?
+  liveUrl        String?
+  featured       Boolean   @default(false)
+  image          String?
+  views          Int       @default(0)
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime? @updatedAt
+
+  @@map("projects")
+}
+
+// ------------------------------------------------------
+// Experience Model (Work, Education, Volunteer, Innovation)
+// ------------------------------------------------------
+enum ExperienceType {
+  WORK
+  EDUCATION
+  VOLUNTEER
+  INNOVATION
+}
+
+model Experience {
+  id           String         @id @default(auto()) @map("_id") @db.ObjectId
+  type         ExperienceType @default(WORK)
+  title        String
+  organization String
+  period       String
+  description  String?
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime?      @updatedAt
+
+  @@map("experiences")
+}
+
+// ------------------------------------------------------
+// Achievement Model (Certificates, Competitions, Honors, Leadership)
+// ------------------------------------------------------
+enum AchievementType {
+  CERTIFICATE
+  COMPETITION
+  ACADEMIC_HONOR
+  LEADERSHIP
+}
+
+model Achievement {
+  id           String          @id @default(auto()) @map("_id") @db.ObjectId
+  type         AchievementType @default(CERTIFICATE)
+  title        String
+  issuer       String
+  date         String
+  credentialId String?
+  link         String?
+  fileUrl      String?         // Cloudinary secure URL for PDF or image attachment
+  createdAt    DateTime        @default(now())
+  updatedAt    DateTime?       @updatedAt
+
+  @@map("achievements")
+}
+
+// ------------------------------------------------------
+// Tech Category & Skill Manager
+// ------------------------------------------------------
+model TechCategory {
+  id        String    @id @default(auto()) @map("_id") @db.ObjectId
+  category  String    @unique
+  items     String[]
+  iconName  String?   @default("Code")
+  createdAt DateTime  @default(now())
+  updatedAt DateTime? @updatedAt
+
+  @@map("tech_categories")
+}
+
+// ------------------------------------------------------
+// Language Model
+// ------------------------------------------------------
+model Language {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  language    String
+  proficiency String
+  createdAt   DateTime @default(now())
+
+  @@map("languages")
+}
+
+// ------------------------------------------------------
+// Personal Info & Credentials
+// ------------------------------------------------------
+model PersonalInfo {
+  id               String   @id @default(auto()) @map("_id") @db.ObjectId
+  name             String
+  shortName        String?
+  title            String?
+  subtitle         String?
+  location         String?
+  phone            String?
+  email            String?
+  github           String?
+  portfolio        String?
+  linkedin         String?
+  instagram        String?
+  facebook         String?
+  avatar           String?
+  profileImageUrl String?
+  logoUrl          String?
+  resumePdf        String?
+  resumeUrl        String?
+  showEarthIcon    Boolean  @default(true)
+  status           String?  @default("Available for Work")
+  bio              String?
+  telegramBotToken String?
+  telegramChatId   String?
+  resendApiKey     String?
+  updatedAt        DateTime @updatedAt
+
+  @@map("personal_info")
+}
+
+// ------------------------------------------------------
+// Contact Messages & Analytics
+// ------------------------------------------------------
+model Message {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  name      String
+  email     String
+  subject   String
+  telegram  String?
+  message   String
+  isRead    Boolean  @default(false)
+  ip        String?
+  createdAt DateTime @default(now())
+
+  @@map("messages")
+}
+
+model SiteAnalytics {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  type      String   @default("visit")
+  targetId  String?
+  ip        String?
+  userAgent String?
+  createdAt DateTime @default(now())
+
+  @@map("site_analytics")
+}
