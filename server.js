@@ -291,7 +291,10 @@ async function uploadBase64ToGridFS(base64Payload, defaultFilename = 'file.bin',
 
 // Express Middleware
 app.use(helmet({ contentSecurityPolicy: false })); // CSP false to avoid breaking Vite inline scripts easily
-app.use(cors({ origin: true, credentials: true }));
+app.use(cors({ 
+  origin: ['http://localhost:5173', 'http://localhost:3000', 'https://sothsokhomal.com', 'https://www.sothsokhomal.com'], 
+  credentials: true 
+}));
 app.use(cookieParser());
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ limit: '50mb', extended: true }));
@@ -664,8 +667,8 @@ app.post('/api/auth/login', loginLimiter, async (req, res) => {
       
       res.cookie('admin_session', token, {
         httpOnly: true,
-        secure: false, // Temporary until HTTPS is setup
-        sameSite: 'lax',
+        secure: true, // Secure cookie for HTTPS
+        sameSite: 'strict',
         maxAge: 2 * 60 * 60 * 1000 // 2 hours
       });
 
