@@ -1593,8 +1593,10 @@ async function getOrCreateSSLCertificates() {
 
 // Server Startup & DB Initializations
 async function startServer() {
-  await initMongoAndGridFS();
-  await seedDatabaseIfEmpty();
+  // Start DB connection in background without blocking server listen
+  initMongoAndGridFS().then(() => seedDatabaseIfEmpty()).catch(err => {
+    console.error('Failed to initialize MongoDB:', err);
+  });
 
   // Start HTTP Server
   const httpServer = http.createServer(app);
