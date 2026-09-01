@@ -25,7 +25,7 @@ const BASE_URL = '/api';
 
 async function safeJson(res: Response) {
   const isJson = res.headers.get('content-type')?.includes('application/json');
-  return isJson ? await safeJson(res) : null;
+  return isJson ? await res.json() : null;
 }
 
 export const api = {
